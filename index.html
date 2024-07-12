@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Potfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.JPEG" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Website Designer</p>
+            <h1>Hi, Im <span>Alley Kyle</span><br>From Philippines</h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.JPEG.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>With over 2 years of being an Information Technology student, I have cultivated a diverse skill set that spans across network administration, cybersecurity, and software development. My journey began with a passion for technology and a desire to understand the intricate workings behind it. This curiosity led me to pursue a degree in Computer Science, where I honed my technical skills and developed a strong foundation in IT principles.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI?UX</span><br>Designing Website interfaces</li>
+                        <li><span>App Development</span><br>Building Calculator apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023-2024</span><br>Personal Website Development</li>
+                        <li><span>2023-2024</span><br>Building Calculator apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-2024</span><br>BSIT in DLL </li>
+                        <li><span>2023-2024</span><br>Online Seminars</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Personal Website Design</h2>
+                <p>Crafting visually appealing and user-friendly websites tailored to your brand and business needs. Ensuring responsive design for optimal performance across all devices.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>Building a Calculator app</h2>
+                <p>Designing and developing custom calculator apps for various purposes, including financial calculations, scientific computations, and specialized business needs..</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------portfolio-------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.JPEG.jpg">
+                <div class="layer">
+                    <h3>Calculator App</h3>
+                    <p>App that helps you calculate all the numbers.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.JPEG.jpg">
+                <div class="layer">
+                    <h3>Portfolio Website Desing</h3>
+                    <p>It can help you organize all of your information about being a professional.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------contact----->
+<div id="contact">
+    <div class="conrtainer">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>alleykyle2@gmail.com</p>
+                <p>09386223953</p>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="Email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="all-rights">
+        <p>@2024 All Rights Reserved</p>
+    </div>
+</div>
+
+
+
+
+
+<script>
+
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+</script>
+
+</body>
+</html>
